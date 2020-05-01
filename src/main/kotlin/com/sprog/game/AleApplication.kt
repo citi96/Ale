@@ -8,4 +8,5 @@ class AleApplication
 
 fun main(args: Array<String>) {
     runApplication<AleApplication>(*args)
+    println("Hello world!")
 }
