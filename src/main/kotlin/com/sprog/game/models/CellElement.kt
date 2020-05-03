@@ -10,15 +10,10 @@ data class CellElement(
         val id: Long? = null,
 
         @Column(name = "COORDINATE_ON_X")
-        val coordinateOnX: Long? = 0,
+        var coordinateOnX: Int,
 
         @Column(name = "COORDINATE_ON_Y")
-        val coordinateOnY: Long? = 0,
-
-        @Column
-        @ManyToOne
-        @JoinColumn(name = "GAME_BOARD")
-        val boardMap: GameBoard,
+        var coordinateOnY: Int,
 
         @Column(name = "ENTITY_ID")
         val entityId: Long? = null,

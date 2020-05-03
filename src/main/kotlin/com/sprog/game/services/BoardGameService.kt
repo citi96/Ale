@@ -8,16 +8,21 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class BoardGameService(private val gameBoardRepo: GameBoardRepository) : IBoardGameService {
+class BoardGameService() : IBoardGameService {
 
-
-    override fun addGameBoard() {
-        //TODO: creare game board
+    @Autowired
+    private lateinit var  gameBoardRepo: GameBoardRepository
+    override fun addGameBoard() : GameBoard {
 
         var gameBoard = GameBoard()
-
-        //gameBoard.cellElements =
-        gameBoardRepo.save(gameBoard)
+        var gameMap : Array<Array<CellElement>> = arrayOf()
+        for (i in 1..15){
+            for (j in 1..15){
+                var cellElement = CellElement(null, i, j, null, "")
+                gameMap[i][j] = cellElement
+            }
+        }
+         return gameBoardRepo.save(gameBoard)
     }
 
     override fun getGameBoard(id: Long): GameBoard = gameBoardRepo.findById(id).get()
