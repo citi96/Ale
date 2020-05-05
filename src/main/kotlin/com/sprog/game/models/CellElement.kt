@@ -20,5 +20,5 @@ data class CellElement(
 
 
         @Column(name = "ENTITY_TYPE")
-        val entityTipe: String? = ""
+        val entityType: String = ""
 )

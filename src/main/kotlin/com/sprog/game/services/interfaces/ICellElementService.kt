@@ -4,7 +4,7 @@ import com.sprog.game.models.CellElement
 
 interface ICellElementService {
 
-    public fun saveCellElement() : CellElement
-    public fun getCellElement(id: Long) : CellElement
-    public fun deleteCellElement(id: Long)
+    fun saveCellElement() : CellElement
+    fun getCellElement(id: Long) : CellElement
+    fun deleteCellElement(id: Long)
 }

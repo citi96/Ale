@@ -4,9 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class AleApplication
+class StrategicGameBoardServerApplication
 
 fun main(args: Array<String>) {
-    runApplication<AleApplication>(*args)
-    println("Hello world!")
+    runApplication<StrategicGameBoardServerApplication>(*args)
 }

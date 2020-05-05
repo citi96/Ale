@@ -4,7 +4,7 @@ import com.sprog.game.models.GameBoard
 
 interface IBoardGameService {
 
-    public fun addGameBoard() : GameBoard
-    public fun getGameBoard(id: Long): GameBoard
-    public fun deleteGameBoard(id: Long)
+    fun addGameBoard() : GameBoard
+    fun getGameBoard(id: Long): GameBoard
+    fun deleteGameBoard(id: Long)
 }

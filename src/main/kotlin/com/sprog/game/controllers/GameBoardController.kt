@@ -15,9 +15,9 @@ class GameBoardController {
     fun addNewGameBoard(): GameBoard = boardGameService.addGameBoard()
 
     @GetMapping("/{gameBoardId}")
-    fun findGameBoardById(@PathVariable("gameBoardId") gameboardId: Long): GameBoard = boardGameService.getGameBoard(gameboardId)
+    fun findGameBoardById(@PathVariable("gameBoardId") gameBoardId: Long): GameBoard = boardGameService.getGameBoard(gameBoardId)
 
     @DeleteMapping("/{gameBoardId}")
-    fun deleteGameBoardById(@PathVariable("gameBoardId") gameboardId: Long) = boardGameService.deleteGameBoard(gameboardId)
+    fun deleteGameBoardById(@PathVariable("gameBoardId") gameBoardId: Long) = boardGameService.deleteGameBoard(gameBoardId)
 
 }
